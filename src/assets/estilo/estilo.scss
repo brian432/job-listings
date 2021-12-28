@@ -38,15 +38,16 @@ header{
     span{
         padding-right:0;
         cursor: pointer;
+        &::after{
+            content: "X";
+            margin-left:.3rem;
+            color: white;
+            background: $Desaturated-Dark-Cyan;
+            padding: .3125rem;
+            border-radius: 0 .3125rem .3125rem 0;
+        }
     }
-    span::after{
-        content: "X";
-        margin-left:.3rem;
-        color: white;
-        background: $Desaturated-Dark-Cyan;
-        padding: .3125rem;
-        border-radius: 0 .3125rem .3125rem 0;
-    }
+    
     .clear{
         margin-left: auto;
         background: none;
@@ -54,10 +55,11 @@ header{
         cursor: pointer;
         color: $Very-Dark-Grayish-Cyan;
         font-weight: 700;
+        &:hover{
+            border-bottom: 2px solid $Very-Dark-Grayish-Cyan;
+        }
     }
-    .clear:hover{
-        border-bottom: 2px solid $Very-Dark-Grayish-Cyan;
-    }
+    
 }
 .App, #root, html{
     min-width: 20rem;
@@ -123,12 +125,11 @@ header{
 
         span{
             margin: 1rem 1rem 0 0;
-        }
-
-        span:hover{
-            cursor: pointer;
-            background:$Desaturated-Dark-Cyan;
-            color: white;
+            &:hover{
+                cursor: pointer;
+                background:$Desaturated-Dark-Cyan;
+                color: white;
+            }
         }
     }
 }
